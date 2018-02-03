@@ -1,0 +1,288 @@
+  Project3.Fight_menu_UI.resources - Embedded, ContainedInManifestFile, 
+  Project3.fight_UI.resources - Embedded, ContainedInManifestFile, 
+  Project3.MyForm.resources - Embedded, ContainedInManifestFile, 
+  Project3.shop_UI.resources - Embedded, ContainedInManifestFile, 
+  Project3.training_UI.resources - Embedded, ContainedInManifestFile, 
+  Project3.work_UI.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Project3, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Items: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int16 required_strenght : Public
+    Int16 required_agility : Public
+    Int16 price : Public
+    System.Drawing.Image picture : Public
+    Boolean active : Public
+  Methods:
+    op_Assign(Items IsConst): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Armor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Items
+    Void .ctor(Int16, System.Drawing.Image, Int16, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Armor): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int16 Armor_rate : Public
+  Methods:
+    set_parameters(Int16, Image, Int16): PrivateScope, Public, HideBySig
+Class Armor_vector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[Armor] vecotr_of_all_armors : Public
+  Methods:
+    initialize_vector(): PrivateScope, Public, HideBySig
+Class Boots: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Items
+    Void .ctor(Int32, System.Drawing.Image, Int16, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 AdditionalAgility : Public
+Class Boots_vector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[Boots] vecotr_of_all_boots : Public
+  Methods:
+    initialize_vector(): PrivateScope, Public, HideBySig
+Class Sword: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Items
+    Void .ctor(Sword): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int16 lower_bound : Public
+    Int16 upper_bound : Public
+  Methods:
+    set_parameters(Int16, Int16, Image, Int16): PrivateScope, Public, HideBySig
+    special_effect(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    op_Assign(Sword IsConst): PrivateScope, Public, HideBySig, SpecialName
+    deal_damage(): PrivateScope, Public, HideBySig
+Class Consumables: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Items
+    Void .ctor(System.Drawing.Image, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 add_health : Public
+Class Character: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Character): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, Int32, Int32, System.Drawing.Image, Sword): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 strenght : Public
+    Int32 agility : Public
+    Int32 gold : Public
+    Int32 health : Public
+    Int32 current_health : Public
+    System.Collections.Generic.List`1[Sword] miecz_vector : Public
+    System.Collections.Generic.List`1[Armor] armor_vector : Public
+    System.Collections.Generic.List`1[Boots] boots_vector : Public
+    System.Collections.Generic.List`1[Consumables] consumables_vector : Public
+    Sword active_sword : Public
+    Armor active_armor : Public
+    Boots active_boots : Public
+    System.Drawing.Image picture : Public
+  Methods:
+    op_Assign(Character IsConst): PrivateScope, Public, HideBySig, SpecialName
+    set_parameters(): PrivateScope, Public, HideBySig
+    dodge(): PrivateScope, Public, HideBySig
+Class Consumables_vector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[Consumables] vector_of_all_consumables : Public
+  Methods:
+    initialize_vector(): PrivateScope, Public, HideBySig
+Class Demon_sword: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Sword
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    special_effect(Int32): PrivateScope, Public, Virtual, HideBySig
+Class Donatello_staff: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Sword
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    special_effect(Int32): PrivateScope, Public, Virtual, HideBySig
+Class Sword_vector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[Sword] vector_of_all_swords : Public
+  Methods:
+    initialize_vector(): PrivateScope, Public, HideBySig
+Class Enemies_vector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[Character] vecotr_of_all_enemies : Public
+  Methods:
+    initialize_vector(): PrivateScope, Public, HideBySig
+Class Project3.fight_UI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.PictureBox Ninja_pic : Public
+    System.Windows.Forms.PictureBox enemy_pic : Public
+    System.Windows.Forms.Label health_label : Public
+    System.Windows.Forms.Label enemy_health_label : Public
+    System.Windows.Forms.PictureBox sword_right : Public
+    System.Windows.Forms.PictureBox sword_left : Public
+    Character player IsByValue : Public, InitOnly
+    Character enemy IsByValue : Public, InitOnly
+    SetHealthLabel health_label_delegate : Public
+    SetHealthLabel enemy_health_label_delegate : Public
+    SetRoundLabel round_label_delegate : Public
+    SwordRightDelegate sword_right_delegate : Public
+    SetEnemyPicture enemy_pic_delegate : Public
+    ShowDoneButton done_button_delegate : Public
+    HidePlayerPicture hide_player_picture_delegate : Public
+    HideEnemyPicture hide_enemy_picture_delegate : Public
+    SwordLeftDelegate sword_left_delegate : Public
+  Methods:
+    set_health_label_method(String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    hide_player_picture_method(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    hide_enemy_picture_method(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    show_done_button_method(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    set_enemy_pic_method(): PrivateScope, Public, HideBySig
+    set_round_label_method(Int32): PrivateScope, Public, HideBySig
+    toggle_right_sword(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    toggle_left_sword(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    InitializeComponent(): PrivateScope, Public, HideBySig
+Class Project3.fight_UI+SetHealthLabel: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Project3.fight_UI+SetRoundLabel: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Project3.fight_UI+SwordRightDelegate: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Project3.fight_UI+SwordLeftDelegate: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Project3.fight_UI+SetEnemyPicture: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Project3.fight_UI+ShowDoneButton: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Project3.fight_UI+HideEnemyPicture: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Project3.fight_UI+HidePlayerPicture: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Fight_algorithm_params: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Character, Character, Project3.fight_UI): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Character player : Public
+    Character oponent : Public
+    Project3.fight_UI form : Public
+Class Fight_algorithm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    fight(Object): PrivateScope, Public, Static, HideBySig
+Class Work_params: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 income : Public
+    Int32 time : Public
+    System.String name : Public
+    System.Drawing.Image gif : Public
+  Methods:
+    set_params(String, Int32, Int32, Image): PrivateScope, Public, HideBySig
+Class Project3.work_UI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Character player IsByValue : Public, InitOnly
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+Class Training_parameters: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 health_cost : Public, Static
+    Int32 agility_cost : Public, Static
+    Int32 strenght_cost : Public, Static
+    Int32 healt_counter : Public, Static
+    Int32 agility_counter : Public, Static
+    Int32 strenght_counter : Public, Static
+  Methods:
+    setparameters(): PrivateScope, Public, HideBySig
+Class Project3.training_UI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.Label Gold_lbl : Public
+    Character player IsByValue : Public, InitOnly
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+Class Project3.shop_UI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Character player IsByValue : Public, InitOnly
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+Class Project3.Fight_menu_UI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Character player IsByValue : Public, InitOnly
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+Class Project3.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String gold_text : Public
+    System.Windows.Forms.Label gold_label : Public
+    Character player IsByValue : Public, InitOnly
+    Character enemy IsByValue : Public, InitOnly
+    Character player_ptr : Public
+    System.Drawing.Image testimage : Public
+    System.Drawing.Image armor_test_image : Public
+    System.Drawing.Image boots_test_image : Public
+    System.Drawing.Image consumable_test_image : Public
